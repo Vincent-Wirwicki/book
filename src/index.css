@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Onest:wght@100..900&display=swap');
+
+/* afacad font */
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=Onest:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Onest:wght@100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+/* comorant*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .martian-mono-<uniquifier> {
+  font-family: "Martian Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+@layer base {
+
+  html,
+  body {
+    font-family: "Martian Mono", monospace;
+    /* font-family: "Afacad", sans-serif; */
+    /* font-family: "Cormorant", serif; */
+    /* font-family: "Space Mono", monospace; */
+    font-family: "Rethink Sans", sans-serif;
+    background-color: #0a0a0a;
+    color: #fafafa;
+    /* cursor: none; */
+
+  }
+
+}
+
+@layer components {
+
+  .cursor {
+    @apply size-3 bg-neutral-200 rounded-full mix-blend-exclusion absolute z-50 pointer-events-none
+  }
+
+  .canvas {
+    @apply relative h-full w-full col-start-5 col-end-9 row-start-2 row-span-8 border-b border-neutral-800
+  }
+
+  /* 
+  .canvas {
+    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] h-[512px] w-[512px] border border-neutral-800 border-l border-r border-neutral-800
+  } */
+
+  .nav {
+    @apply fixed top-5 left-1/2 translate-x-[-50%] h-fit w-fit z-50 flex items-center justify-evenly font-thin text-xs
+  }
+
+  .nav-link {
+    @apply h-8 w-16 cursor-none flex justify-center items-end border-b border-neutral-800 tracking-wider
+  }
+
+  /* .nav-link-title {} */
+
+  .page {
+    @apply absolute top-0 left-0 h-screen w-screen
+  }
+
+
+
+  .grid-layout {
+    @apply grid grid-cols-12 grid-rows-12 gap-1
+  }
+
+}
+
+@layer utilities {
+
+  .flex-center-y {
+    @apply flex flex-col justify-center items-center
+  }
+
+}
