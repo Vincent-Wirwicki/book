@@ -1,5 +1,3 @@
-import React from "react";
-
 const Burger = () => {
   //   const tranformgrid = (i: number) => {};
   const r56 = "rotate-45 opacity-0";
